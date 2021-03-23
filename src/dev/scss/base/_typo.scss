@@ -1,0 +1,15 @@
+/*! -------------------------
+Typo
+-------------------------- */
+
+@use "../abstract" as *;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $size-md1;
+  color: $color-text;
+}
