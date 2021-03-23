@@ -1,4 +1,16 @@
-ul.navbar__container
-  each link, nombre in navLinks
-    li.navbar__item #{nombre}
+.navbar__container
+  a(href="#header__hero").navbar__logo-container
+    img(src="./assets/logos/logo-barber-inclinado-rojo.png", alt="").navbar__logo
+  ul.navbar__links-container
+    each link, nombre in navLinks
       a(href="#"+link).navbar__link 
+        li.navbar__item #{nombre}
+  ul.navbar__buttons-container
+    each url, icon in navSocials
+      li.navbar__button-social
+        a(href=""+url target="_blank")
+          i(class="fab fa-"+icon).button-social__icon
+    li.navbar__button-menu
+      .menu-icon-container#menu-icon-container
+        .menu-icon
+.menu__container.menu__container--hide#menu__container

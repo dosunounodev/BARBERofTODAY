@@ -3,3 +3,76 @@ Buttons
 -------------------------- */
 
 @use "../abstract" as *;
+
+// NAV BTN MENU
+// ** espacio reservado en navbar 60x60
+.navbar__button-menu {
+  @include flex(row, center, center);
+  width: 60px;
+  height: 60px;
+  @include tablet {
+    display: none;
+  }
+}
+
+// Margen clickeable y animado
+
+.menu-icon-container {
+  @include flex(row, center, center);
+  width: 40px;
+  height: 40px;
+  @media (hover: hover) and (pointer: fine) {
+    cursor: pointer;
+    &:hover {
+      & > .menu-icon {
+        background-color:$color-primary;
+        transform: scale(1.1);
+      }
+      & > .menu-icon--active {
+        background-color:$color-text-dark;
+        transform: rotate(45deg) scale(1);
+      }
+    }
+  }
+}
+
+// Item animado
+
+.menu-icon {
+  position: relative;
+  width: 30px;
+  height: 4px;
+  background-color: $color-text-dark;
+  @include transition(.5s, 0, linear, background-color, transform);
+
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: $color-text-dark;
+    @include transition(.5s, 0, linear, background-color, transform, opacity);
+  }
+  &::after {
+    transform: translateY(-10px);
+  }
+  &::before {
+    transform: translateY(10px);
+  }
+}
+
+// Estado activo
+
+.menu-icon--active {
+  background-color: $color-primary;
+  transform: rotate(45deg) scale(0.8);
+
+  &::after {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  &::before {
+    transform: translateY(0px) rotate(90deg);
+    background-color: $color-primary;
+  }
+}

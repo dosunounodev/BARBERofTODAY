@@ -7,4 +7,5 @@ Header
 .block__header {
   @include flex-center(column);
   width: 100%;
+  height: 100%;
 }

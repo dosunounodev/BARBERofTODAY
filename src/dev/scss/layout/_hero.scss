@@ -65,27 +65,28 @@ Hero
         }
       }
       &:nth-child(2) {
-        font-size: $size-lg3;
+        font-size: $size-lg2;
         color: $color-primary;
         &::after {
           background-color:rgba($color-secondary, 0.5);
         }
         @include tablet {
-          font-size: $size-xxl;
+          font-size: $size-xl2;
         }
       }
     }
   }
 }
 
-.hero__start {
+// .hero__start {
 
-}
+// }
 
 .hero__cta {
   display: block;
-  padding: 20px 40px;
-  font-size: $size-md2;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: $size-md1;
   font-family: $font-secondary;
   font-weight: $bold;
   text-transform: uppercase;

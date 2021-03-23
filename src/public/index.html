@@ -16,7 +16,7 @@
   </head>
   <body>
     <header class="block__header">
-      <article class="header__hero">
+      <article class="header__hero" id="header__hero">
         <div class="hero__container">
           <div class="hero__logo-container"><img class="hero__logo" src="./assets/logos/logo-isologo-negro.png" alt=""></div>
           <div class="hero__content">
@@ -25,21 +25,36 @@
           <div class="hero__start"><a class="hero__cta" href="#section__nosotros">inicio</a></div>
         </div>
       </article>
-      <nav class="header__navbar">
-        <ul class="navbar__container">
-          <li class="navbar__item">Nosotros<a class="navbar__link" href="#nosotros"> </a></li>
-          <li class="navbar__item">Cursos<a class="navbar__link" href="#cursos"> </a></li>
-          <li class="navbar__item">Tutoriales<a class="navbar__link" href="#tutoriales"> </a></li>
-          <li class="navbar__item">Blog<a class="navbar__link" href="#blog"> </a></li>
-          <li class="navbar__item">Team<a class="navbar__link" href="#team"> </a></li>
-          <li class="navbar__item">Shop<a class="navbar__link" href="#shop"> </a></li>
-          <li class="navbar__item">Contacto<a class="navbar__link" href="#contacto"> </a></li>
-        </ul>
+      <nav class="header__navbar" id="header__navbar">
+        <div class="navbar__container"><a class="navbar__logo-container" href="#header__hero"><img class="navbar__logo" src="./assets/logos/logo-barber-inclinado-rojo.png" alt=""></a>
+          <ul class="navbar__links-container"><a class="navbar__link" href="#nosotros"> 
+              <li class="navbar__item">Nosotros</li></a><a class="navbar__link" href="#cursos"> 
+              <li class="navbar__item">Cursos</li></a><a class="navbar__link" href="#tutoriales"> 
+              <li class="navbar__item">Tutoriales</li></a><a class="navbar__link" href="#blog"> 
+              <li class="navbar__item">Blog</li></a><a class="navbar__link" href="#team"> 
+              <li class="navbar__item">Team</li></a><a class="navbar__link" href="#shop"> 
+              <li class="navbar__item">Shop</li></a><a class="navbar__link" href="#contacto"> 
+              <li class="navbar__item">Contacto</li></a>
+          </ul>
+          <ul class="navbar__buttons-container">
+            <li class="navbar__button-social"><a href="https://www.instagram.com/barberoftoday/" target="_blank"><i class="fab fa-instagram button-social__icon"></i></a></li>
+            <li class="navbar__button-social"><a href="https://www.youtube.com/barberoftodayvideos" target="_blank"><i class="fab fa-youtube button-social__icon"></i></a></li>
+            <li class="navbar__button-social"><a href="https://www.facebook.com/BarberOfToday" target="_blank"><i class="fab fa-facebook button-social__icon"></i></a></li>
+            <li class="navbar__button-menu">
+              <div class="menu-icon-container" id="menu-icon-container">
+                <div class="menu-icon"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="menu__container menu__container--hide" id="menu__container"></div>
       </nav>
     </header>
     <main class="block__main">
       <section class="section__nosotros" id="section__nosotros">
-        <div class="nosotros__container"></div>
+        <div class="nosotros__container">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi fugiat tempore ducimus provident? Non ducimus minima quas, similique expedita enim labore delectus esse harum. Ducimus repellendus fugiat recusandae iste enim.</p>
+        </div>
       </section>
       <section class="section__shop">
         <div class="shop__container"></div>
@@ -63,5 +78,6 @@
     <footer class="block__footer">
       <footer></footer>
     </footer>
+    <script src="./js/scripts.js"> </script>
   </body>
 </html>
