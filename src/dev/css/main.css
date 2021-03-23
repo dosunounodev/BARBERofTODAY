@@ -250,6 +250,13 @@ Footer
 /*! -------------------------
 Index
 -------------------------- */
+.block__header {
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+  background-image: url("../assets/images/herotest_cut.jpg");
+}
+
 /*! -------------------------
 Section - Blog
 -------------------------- */

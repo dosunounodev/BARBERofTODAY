@@ -3,3 +3,8 @@ Header
 -------------------------- */
 
 @use "../abstract" as *;
+
+.block__header {
+  @include flex-center(column);
+  width: 100%;
+}

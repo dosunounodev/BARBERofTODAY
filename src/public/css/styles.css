@@ -48,7 +48,7 @@ template {
 
 :focus {
   outline: none;
-  box-shadow: 0 0 0 2px #333;
+  box-shadow: 0 0 0 0;
 }
 
 a {
@@ -212,9 +212,9 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1.6rem;
-  color: #404042;
+  color: #e1edf2;
 }
 
 /*! -------------------------
@@ -241,11 +241,56 @@ Grid
 /*! -------------------------
 Header
 -------------------------- */
+.block__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/*! -------------------------
+Hero
+-------------------------- */
+.header__hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../assets/images/herotest_cut.jpg");
+  background-size: cover;
+  background-position: right top;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 5% 2%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero__logo {
+  height: 25vh;
+}
+.hero__logo img {
+  height: 100%;
+  filter: invert(1);
+}
+
+.hero__cta {
+  display: block;
+}
+
 /*! -------------------------
 Navbar
--------------------------- */
-/*! -------------------------
-Sidebar
 -------------------------- */
 /*! -------------------------
 Footer
@@ -254,16 +299,30 @@ Footer
 Index
 -------------------------- */
 /*! -------------------------
-Home
+Section - Blog
 -------------------------- */
 /*! -------------------------
-About
+Section - Contacto
 -------------------------- */
 /*! -------------------------
-Services
+Section - Cursos
 -------------------------- */
 /*! -------------------------
-Contact
+Section - Nosotros
+-------------------------- */
+.section__nosotros {
+  width: 100%;
+  height: 100vh;
+}
+
+/*! -------------------------
+Section - Shop
+-------------------------- */
+/*! -------------------------
+Section - Team
+-------------------------- */
+/*! -------------------------
+Section - Tutoriales
 -------------------------- */
 /*! -------------------------
 Admin
