@@ -1,9 +1,10 @@
 .hero__container
-  .hero__logo
-    img(src="./assets/logos/logo-isologo-negro.png", alt="")
+  .hero__logo-container
+    img(src="./assets/logos/logo-isologo-negro.png", alt="").hero__logo
   .hero__content
-    span.hero__pretitle cursos, tutoriales y productos
-    h1.hero__title aca va un texto copado que cambia
-    span.hero__subtitle una plataforma pensada y creada por barberos, para barberos
+    h1.hero__title
+      span pensado y creado
+      span por barberos
+      span para barberos
   .hero__start
-    span.hero__cta inicio
+    a(href="#section__nosotros").hero__cta inicio

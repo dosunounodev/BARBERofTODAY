@@ -204,6 +204,15 @@ textarea {
 /*! -------------------------
 Base
 -------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, p, span {
+  margin: 0;
+  padding: 0;
+}
+
 /*! -------------------------
 Typo
 -------------------------- */
@@ -214,7 +223,8 @@ html {
 body {
   font-family: "Work Sans", sans-serif;
   font-size: 1.6rem;
-  color: #e1edf2;
+  font-weight: 400;
+  color: #3c3b3c;
 }
 
 /*! -------------------------
@@ -273,20 +283,86 @@ Hero
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 5% 2%;
-  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px 20px 40px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.hero__logo {
+.hero__logo-container {
   height: 25vh;
 }
-.hero__logo img {
+.hero__logo-container .hero__logo {
   height: 100%;
   filter: invert(1);
 }
 
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: #e1edf2;
+}
+.hero__content .hero__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+.hero__content .hero__title span {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+}
+.hero__content .hero__title span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+}
+.hero__content .hero__title span:nth-child(1), .hero__content .hero__title span:nth-child(3) {
+  font-size: 2.4rem;
+}
+.hero__content .hero__title span:nth-child(1)::after, .hero__content .hero__title span:nth-child(3)::after {
+  background-color: rgba(230, 57, 57, 0.5);
+}
+@media screen and (min-width: 768px) {
+  .hero__content .hero__title span:nth-child(1), .hero__content .hero__title span:nth-child(3) {
+    font-size: 4.2rem;
+  }
+}
+.hero__content .hero__title span:nth-child(2) {
+  font-size: 3.6rem;
+  color: #e63939;
+}
+.hero__content .hero__title span:nth-child(2)::after {
+  background-color: rgba(225, 237, 242, 0.5);
+}
+@media screen and (min-width: 768px) {
+  .hero__content .hero__title span:nth-child(2) {
+    font-size: 6.4rem;
+  }
+}
+
 .hero__cta {
   display: block;
+  padding: 20px 40px;
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #e63939;
+  background-color: rgba(4, 4, 0, 0.7);
+  border: 2px solid #e63939;
+  border-radius: 20px;
 }
 
 /*! -------------------------

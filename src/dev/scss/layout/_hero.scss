@@ -19,20 +19,63 @@ Hero
   @include flex(column, space-between, center);
   width: 100%;
   height: 100%;
-  padding: 5% 2%;
-  background-color: rgba($color: #000000, $alpha: 0.6);
+  padding: 20px 20px 40px;
+  background-color: rgba($color: #000000, $alpha: 0.2);
 }
 
-.hero__logo {
+.hero__logo-container {
   height: 25vh;
-  img {
+  .hero__logo {
     height: 100%;
     filter: invert(1);
   }
 }
 
 .hero__content {
+  @include flex-center(column);
+  text-transform: uppercase;
+  color: $color-secondary;
 
+  .hero__title {
+    @include flex-center(column);
+    font-family: $font-secondary;
+    font-weight: 700;
+    text-align: center;
+    span {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      width: 100%;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        z-index: -1;
+      }
+      &:nth-child(1), &:nth-child(3) {
+        font-size: $size-lg1;
+        &::after {
+          background-color:rgba($color-primary, 0.5);
+        }
+        @include tablet {
+          font-size: $size-xl1;
+        }
+      }
+      &:nth-child(2) {
+        font-size: $size-lg3;
+        color: $color-primary;
+        &::after {
+          background-color:rgba($color-secondary, 0.5);
+        }
+        @include tablet {
+          font-size: $size-xxl;
+        }
+      }
+    }
+  }
 }
 
 .hero__start {
@@ -41,4 +84,14 @@ Hero
 
 .hero__cta {
   display: block;
+  padding: 20px 40px;
+  font-size: $size-md2;
+  font-family: $font-secondary;
+  font-weight: $bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-primary;
+  background-color:rgba($color-bg-dark, 0.7);
+  border: 2px solid $color-primary;
+  border-radius: 20px;
 }
