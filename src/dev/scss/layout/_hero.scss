@@ -19,8 +19,8 @@ Hero
   @include flex(column, space-between, center);
   width: 100%;
   height: 100%;
-  padding: 20px 20px 40px;
-  background-color: rgba($color: #000000, $alpha: 0.2);
+  padding: 20px 20px 60px;
+  background-image: linear-gradient(to bottom, rgba($color: $color-bg-dark, $alpha: 0), rgba($color: $color-bg-dark, $alpha: 0.8) );
 }
 
 .hero__logo-container {
