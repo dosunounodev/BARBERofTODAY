@@ -81,7 +81,7 @@ Navbar
   }
   &:first-child {
     display: none;
-    @include laptop {
+    @media screen and (min-width:880px) {
       display: inherit;
     }
   }
