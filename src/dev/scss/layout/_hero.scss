@@ -25,6 +25,9 @@ Hero
 
 .hero__logo-container {
   height: 25vh;
+  @include tablet {
+    height: 40vh;
+  }
   .hero__logo {
     height: 100%;
     filter: invert(1);
@@ -92,7 +95,15 @@ Hero
   text-transform: uppercase;
   text-decoration: none;
   color: $color-primary;
-  background-color:rgba($color-bg-dark, 0.7);
+  background-color:rgba($color-bg-light, 0.2);
   border: 2px solid $color-primary;
   border-radius: 20px;
+  @include transition(.5s, 0, linear, color,background-color,border);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: $color-secondary;
+      background-color: rgba($color-bg-dark, 0.8);
+      border: 2px solid $color-secondary;
+    }
+  }
 }

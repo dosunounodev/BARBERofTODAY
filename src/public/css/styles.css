@@ -374,6 +374,11 @@ Hero
 .hero__logo-container {
   height: 25vh;
 }
+@media screen and (min-width: 768px) {
+  .hero__logo-container {
+    height: 40vh;
+  }
+}
 .hero__logo-container .hero__logo {
   height: 100%;
   filter: invert(1);
@@ -445,9 +450,21 @@ Hero
   text-transform: uppercase;
   text-decoration: none;
   color: #e63939;
-  background-color: rgba(4, 4, 0, 0.7);
+  background-color: rgba(253, 253, 252, 0.2);
   border: 2px solid #e63939;
   border-radius: 20px;
+  will-change: color, background-color, border;
+  transition-property: color, background-color, border;
+  transition-duration: 0.5s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hero__cta:hover {
+    color: #e1edf2;
+    background-color: rgba(4, 4, 0, 0.8);
+    border: 2px solid #e1edf2;
+  }
 }
 
 /*! -------------------------
@@ -484,7 +501,7 @@ Navbar
 
 .navbar__logo-container {
   position: relative;
-  width: 100px;
+  width: 120px;
   height: 60px;
 }
 
