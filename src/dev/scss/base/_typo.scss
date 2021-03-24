@@ -14,3 +14,34 @@ body {
   font-weight: $normal;
   color: $color-text;
 }
+
+h2 {
+  font-family: $font-secondary;
+  font-size: $size-xl1;
+  font-weight: $bold;
+  color: $color-primary;
+  text-transform: uppercase;
+  text-align: center;
+
+  span {
+    position: relative;
+    z-index: -1;
+    display: inline-block;
+    font-family: $font-primary;
+    font-size: $size-lg1;
+    font-weight: $semibold;
+    color: $color-text-dark;
+    text-transform: uppercase;
+    text-align: center;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      z-index: -1;
+      background-color:rgba($color-primary, 0.5)
+    }
+  }
+}

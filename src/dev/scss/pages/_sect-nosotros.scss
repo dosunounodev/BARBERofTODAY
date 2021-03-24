@@ -3,14 +3,3 @@ Section - Nosotros
 -------------------------- */
 
 @use "../abstract" as *;
-
-.section__nosotros {
-  @include flex-center(row);
-  width: 100%;
-  height: 300vh;
-}
-
-.nosotros__container {
-  width: 100%;
-  max-width: 1300px;
-}

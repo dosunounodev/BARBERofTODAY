@@ -11,7 +11,6 @@ Hero
   background-image: url('../assets/images/hero.jpg');
   background-size: cover;
   background-position: right top;
-  background-blend-mode:overlay;
   background-attachment:fixed;
 }
 
@@ -30,7 +29,7 @@ Hero
   }
   .hero__logo {
     height: 100%;
-    filter: invert(1);
+    filter: invert(1) drop-shadow(5px 5px 5px $color-primary)
   }
 }
 
@@ -85,25 +84,3 @@ Hero
 
 // }
 
-.hero__cta {
-  display: block;
-  margin-top: 20px;
-  padding: 15px 30px;
-  font-size: $size-md1;
-  font-family: $font-secondary;
-  font-weight: $bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $color-primary;
-  background-color:rgba($color-bg-light, 0.2);
-  border: 2px solid $color-primary;
-  border-radius: 20px;
-  @include transition(.5s, 0, linear, color,background-color,border);
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      color: $color-secondary;
-      background-color: rgba($color-bg-dark, 0.8);
-      border: 2px solid $color-secondary;
-    }
-  }
-}
