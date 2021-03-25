@@ -3,3 +3,14 @@ Section - Shop
 -------------------------- */
 
 @use "../abstract" as *;
+
+.section__shop {
+  background-color: $color-primary;
+  padding-bottom: 65px;
+}
+
+.shop__container {
+  h3 {
+    color: $color-secondary;
+  }
+}

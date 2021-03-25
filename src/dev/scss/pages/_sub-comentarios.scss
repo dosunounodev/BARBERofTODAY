@@ -1,13 +1,13 @@
 /*! -------------------------
-Section - Tutoriales
+Sub - Comentarios
 -------------------------- */
 
 @use "../abstract" as *;
 
-.section__tutoriales {
-  background-color: $color-bg-dark;
+.section__comentarios {
+  background-color: $color-secondary;
   padding-bottom: 65px;
 }
 
-.tutoriales__container {
+.comentarios__container {
 }

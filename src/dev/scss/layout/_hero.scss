@@ -63,7 +63,7 @@ Hero
           background-color:rgba($color-primary, 0.5);
         }
         @include tablet {
-          font-size: $size-xl1;
+          font-size: $size-xl2;
         }
       }
       &:nth-child(2) {
@@ -73,7 +73,7 @@ Hero
           background-color:rgba($color-secondary, 0.5);
         }
         @include tablet {
-          font-size: $size-xl2;
+          font-size: $size-xl3;
         }
       }
     }

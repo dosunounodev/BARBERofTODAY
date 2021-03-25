@@ -12,10 +12,8 @@ Layout
 }
 
 .banner__container,
-.tutoriales__container,
 .comentarios__container,
+.tutoriales__container,
 .shop__container {
-  max-width: 100%;
-  height: 350px;
-  background-color: $color-primary;
+  max-width: 1300px;
 }

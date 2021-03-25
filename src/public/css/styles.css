@@ -223,6 +223,7 @@ section {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  height: 100vh;
   padding-top: 65px;
   scroll-margin: 65px;
 }
@@ -250,25 +251,40 @@ body {
   font-weight: 400;
   color: #3c3b3c;
 }
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
 
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 4.8rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #e63939;
   text-transform: uppercase;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 4.8rem;
+  }
 }
 h2 span {
   position: relative;
   z-index: -1;
   display: inline-block;
   font-family: "Work Sans", sans-serif;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: #202022;
   text-transform: uppercase;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  h2 span {
+    font-size: 2.4rem;
+  }
 }
 h2 span::after {
   content: "";
@@ -279,6 +295,20 @@ h2 span::after {
   height: 50%;
   z-index: -1;
   background-color: rgba(230, 57, 57, 0.5);
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #e63939;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 3rem;
+  }
 }
 
 /*! -------------------------
@@ -409,6 +439,57 @@ Forms
 /*! -------------------------
 Menus
 -------------------------- */
+.menu__container {
+  position: absolute;
+  top: 62px;
+  right: 60px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: calc(100% - 60px);
+  height: calc(100vh - 62px);
+  padding: 40px 10px 60px;
+  background-color: rgba(32, 32, 34, 0.99);
+  transform: translate(0);
+  will-change: transform, opacity;
+  transition-property: transform, opacity;
+  transition-duration: 0.5s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+
+.menu__container--hide {
+  transform: translatex(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu__link {
+  align-self: flex-start;
+  width: 80%;
+  background-color: #e63939;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: end;
+  color: #e1edf2;
+}
+.menu__link:nth-child(even) {
+  align-self: flex-end;
+  background-color: #e1edf2;
+  color: #e63939;
+  text-align: start;
+}
+
+.menu__item {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
 /*! -------------------------
 Layout
 -------------------------- */
@@ -423,12 +504,10 @@ Layout
 }
 
 .banner__container,
-.tutoriales__container,
 .comentarios__container,
+.tutoriales__container,
 .shop__container {
-  max-width: 100%;
-  height: 350px;
-  background-color: #e63939;
+  max-width: 1300px;
 }
 
 /*! -------------------------
@@ -517,7 +596,7 @@ Hero
 }
 @media screen and (min-width: 768px) {
   .hero__content .hero__title span:nth-child(1), .hero__content .hero__title span:nth-child(3) {
-    font-size: 4.8rem;
+    font-size: 5.6rem;
   }
 }
 .hero__content .hero__title span:nth-child(2) {
@@ -529,7 +608,7 @@ Hero
 }
 @media screen and (min-width: 768px) {
   .hero__content .hero__title span:nth-child(2) {
-    font-size: 5.6rem;
+    font-size: 6.4rem;
   }
 }
 
@@ -685,28 +764,6 @@ Navbar
   }
 }
 
-.menu__container {
-  position: absolute;
-  top: 62px;
-  right: 60px;
-  z-index: 100;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(32, 32, 34, 0.95);
-  transform: translate(0);
-  will-change: transform, opacity;
-  transition-property: transform, opacity;
-  transition-duration: 0.5s;
-  transition-delay: 0;
-  transition-timing-function: linear;
-}
-
-.menu__container--hide {
-  transform: translatex(-100%);
-  opacity: 0;
-  pointer-events: none;
-}
-
 /*! -------------------------
 Footer
 -------------------------- */
@@ -717,23 +774,53 @@ Index
 Section - Blog
 -------------------------- */
 /*! -------------------------
-Section - Contacto
+Section - Nosotros
 -------------------------- */
 /*! -------------------------
 Section - Cursos
 -------------------------- */
 /*! -------------------------
-Section - Nosotros
+Section - Tutoriales
 -------------------------- */
-/*! -------------------------
-Section - Shop
--------------------------- */
+.section__tutoriales {
+  background-color: #040400;
+  padding-bottom: 65px;
+}
+
 /*! -------------------------
 Section - Team
 -------------------------- */
 /*! -------------------------
-Section - Tutoriales
+Section - Shop
 -------------------------- */
+.section__shop {
+  background-color: #e63939;
+  padding-bottom: 65px;
+}
+
+.shop__container h3 {
+  color: #e1edf2;
+}
+
+/*! -------------------------
+Section - Contacto
+-------------------------- */
+/*! -------------------------
+Sub - Banner
+-------------------------- */
+.section__banner {
+  background-color: #e1edf2;
+  padding-bottom: 65px;
+}
+
+/*! -------------------------
+Sub - Comentarios
+-------------------------- */
+.section__comentarios {
+  background-color: #e1edf2;
+  padding-bottom: 65px;
+}
+
 /*! -------------------------
 Admin
 -------------------------- */

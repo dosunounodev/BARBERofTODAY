@@ -1,13 +1,13 @@
 /*! -------------------------
-Section - Tutoriales
+Sub - Banner
 -------------------------- */
 
 @use "../abstract" as *;
 
-.section__tutoriales {
-  background-color: $color-bg-dark;
+.section__banner {
+  background-color: $color-secondary;
   padding-bottom: 65px;
 }
 
-.tutoriales__container {
+.banner__container {
 }

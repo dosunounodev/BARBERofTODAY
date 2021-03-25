@@ -13,26 +13,35 @@ body {
   font-size: $size-md1;
   font-weight: $normal;
   color: $color-text;
+  @include tablet {
+    font-size: $size-md2;
+  }
 }
 
 h2 {
   font-family: $font-secondary;
-  font-size: $size-xl1;
+  font-size: $size-lg2;
   font-weight: $bold;
   color: $color-primary;
   text-transform: uppercase;
   text-align: center;
+  @include tablet {
+    font-size: $size-xl1;
+  }
 
   span {
     position: relative;
     z-index: -1;
     display: inline-block;
     font-family: $font-primary;
-    font-size: $size-lg1;
+    font-size: $size-md2;
     font-weight: $semibold;
     color: $color-text-dark;
     text-transform: uppercase;
     text-align: center;
+    @include tablet {
+      font-size: $size-lg1;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -43,5 +52,17 @@ h2 {
       z-index: -1;
       background-color:rgba($color-primary, 0.5)
     }
+  }
+}
+
+h3 {
+  font-family: $font-secondary;
+  font-size: $size-lg1;
+  font-weight: $bold;
+  color: $color-primary;
+  text-transform: uppercase;
+  text-align: center;
+  @include tablet {
+    font-size: $size-lg2;
   }
 }

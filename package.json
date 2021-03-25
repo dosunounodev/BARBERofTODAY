@@ -10,8 +10,5 @@
     "barber"
   ],
   "author": "dosunouno.dev - Martin Fernandez",
-  "license": "MIT",
-  "devDependencies": {
-    "purgecss": "^4.0.3"
-  }
+  "license": "MIT"
 }

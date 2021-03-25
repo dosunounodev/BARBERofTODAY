@@ -13,4 +13,7 @@
     li.navbar__button-menu
       .menu-icon-container#menu-icon-container
         .menu-icon
-.menu__container.menu__container--hide#menu__container
+ul.menu__container.menu__container--hide#menu__container
+  each link, nombre in navLinks
+    a(href="#"+link).menu__link 
+      li.menu__item #{nombre}
