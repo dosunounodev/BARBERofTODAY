@@ -13,15 +13,19 @@ function observarEntries (entries) {
   }
 }
 
+function toggleMenu() {
+  menubtn.firstElementChild.classList.toggle('menu-icon--active')
+  menucontainer.classList.toggle('menu__container--hide')
+}
+
 observer.observe(hero)
 
 menubtn.addEventListener('click', (e) => {
-  menubtn.firstElementChild.classList.toggle('menu-icon--active')
-  menucontainer.classList.toggle('menu__container--hide')
+  toggleMenu()
 })
 
 menucontainer.addEventListener('click', (e) => {
   if (e.target.classList.contains('menu__item')) {
-    menucontainer.classList.toggle('menu__container--hide')
+    toggleMenu()
   }
 })
