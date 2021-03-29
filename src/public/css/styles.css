@@ -801,10 +801,19 @@ Section - Nosotros
   align-items: center;
   max-width: 400px;
   margin: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   padding: 20px;
-  border-radius: 5px;
   background-color: #e8e9e6;
+  background-image: linear-gradient(to bottom, #FDFDFC, #e8e9e6);
+  box-shadow: 3px 3px 8px 0 #040400;
+}
+.nosotros__card:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .nosotros__card {
+    margin-bottom: 0;
+  }
 }
 
 .ncard__img {
@@ -832,6 +841,112 @@ Section - Tutoriales
 .section__tutoriales {
   background-color: #040400;
   padding-bottom: 65px;
+}
+
+.tutoriales__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tutoriales__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .tutoriales__content {
+    flex-direction: row;
+  }
+}
+
+.tutoriales__youtube {
+  box-shadow: 5px 5px 15px 0 #e63939;
+  overflow: hidden;
+}
+.tutoriales__youtube img {
+  width: 100%;
+  will-change: transform;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+@media (hover: hover) and (pointer: fine) {
+  .tutoriales__youtube img:hover {
+    transform: scale(1.2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .tutoriales__youtube {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tutoriales__youtube {
+    width: 50%;
+  }
+}
+
+.tutoriales__texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .tutoriales__texts {
+    width: 40%;
+    margin-top: 0;
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tutoriales__texts {
+    width: 50%;
+  }
+}
+.tutoriales__texts img {
+  width: 60%;
+  max-width: 300px;
+  filter: invert(1);
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .tutoriales__texts img {
+    width: 50%;
+  }
+}
+.tutoriales__texts p {
+  margin-top: 20px;
+  text-align: center;
+  color: #FDFDFC;
+}
+.tutoriales__texts a {
+  margin-top: 20px;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #e63939;
+  color: #FDFDFC;
+  will-change: color, background-color;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+@media (hover: hover) and (pointer: fine) {
+  .tutoriales__texts a:hover {
+    color: #e63939;
+    background-color: #FDFDFC;
+  }
 }
 
 /*! -------------------------
@@ -901,6 +1016,9 @@ Sub - Banner
     margin-bottom: 0;
   }
 }
+.banner__fact:nth-child(2) .banner-fact__title {
+  margin-top: 0;
+}
 
 .banner-fact__img {
   filter: invert(1);
@@ -908,7 +1026,7 @@ Sub - Banner
 }
 
 .banner-fact__title {
-  margin-top: 0px;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -928,7 +1046,7 @@ Sub - Comentarios
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  min-height: 300px;
+  min-height: 200px;
   padding: 0;
   background-image: url(../assets/images/cortando-tijera.jpg);
   background-repeat: no-repeat;

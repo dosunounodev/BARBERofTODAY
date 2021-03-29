@@ -10,4 +10,79 @@ Section - Tutoriales
 }
 
 .tutoriales__container {
+  @include flex-center(column)
+}
+
+.tutoriales__content {
+  @include flex-center(column);
+  margin-top: 40px;
+  padding: 0 20px;
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.tutoriales__youtube {
+  box-shadow: 5px 5px 15px 0 $color-primary;
+  overflow: hidden;
+  img {
+    width: 100%;
+    @include transition(.3s,0,linear,transform);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  @include tablet {
+    width: 60%;
+  }
+  @include laptop {
+    width: 50%
+  }
+  
+}
+
+.tutoriales__texts {
+  @include flex(column, flex-start, center);
+  margin-top: 40px;
+  @include tablet {
+    width: 40%;
+    margin-top: 0;
+    margin-left: 40px;
+  }
+  @include laptop {
+    width: 50%
+  }
+  img {
+    width: 60%;
+    max-width: 300px;
+    filter: invert(1);
+    margin-bottom: 20px;
+    @include tablet {
+      width: 50%;
+    }
+  }
+  p {
+    margin-top: 20px;
+    text-align: center;
+    color: $color-bg-light;
+  }
+  a {
+    margin-top: 20px;
+    padding: 20px;
+    font-family: $font-secondary;
+    font-weight: $bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $color-primary;
+    color: $color-bg-light;
+    @include transition(.3s,0,linear,color,background-color);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: $color-primary;
+        background-color: $color-bg-light;
+      }
+    }
+  }
 }

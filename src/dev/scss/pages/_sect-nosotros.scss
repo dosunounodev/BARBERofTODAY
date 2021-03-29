@@ -18,10 +18,18 @@ Section - Nosotros
   @include flex(column, initial, center);
   max-width: 400px;
   margin: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   padding: 20px;
-  border-radius: 5px;
+  // border-radius: 10px;
   background-color: $color-label;
+  background-image: linear-gradient(to bottom, $color-bg-light, $color-label);
+  box-shadow: 3px 3px 8px 0 $color-bg-dark;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .ncard__img {

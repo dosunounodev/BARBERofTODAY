@@ -6,7 +6,7 @@ Sub - Comentarios
 
 .section__comentarios {
   @include flex-center(row);
-  min-height: 300px;
+  min-height: 200px;
   padding: 0;
   background-image: url(../assets/images/cortando-tijera.jpg);
   background-repeat: no-repeat;

@@ -36,17 +36,20 @@ Sub - Banner
   @include tablet {
     margin-bottom: 0;
   }
+  &:nth-child(2) {
+    .banner-fact__title {
+      margin-top: 0;
+    }
+  }
 }
 
 .banner-fact__img {
   filter: invert(1);
-  // position: absolute;
   width: 80px;
-  // transform: translatey(-60px);
 }
 
 .banner-fact__title {
-  margin-top: 0px;
+  margin-top: 20px;
   text-align: center;
 }
 
