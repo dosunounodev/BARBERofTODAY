@@ -5,9 +5,55 @@ Sub - Banner
 @use "../abstract" as *;
 
 .section__banner {
-  background-color: $color-secondary;
-  padding-bottom: 65px;
+  @include flex-center(row);
+  min-height: 300px;
+  padding: 0;
+  background-image: url(../assets/images/gorra1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-color: rgba($color-bg-dark, .6);
+  background-blend-mode: overlay;
+  background-attachment: fixed
 }
 
 .banner__container {
+  @include flex-center(column);
+  width: 100%;
+  padding: 20px;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-around
+  }
+}
+
+.banner__fact {
+  @include flex-center(column);
+  margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.banner-fact__img {
+  filter: invert(1);
+  // position: absolute;
+  width: 80px;
+  // transform: translatey(-60px);
+}
+
+.banner-fact__title {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.banner-fact__text {
+  margin-top: 0px;
+  font-weight: $semibold;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-label;
 }

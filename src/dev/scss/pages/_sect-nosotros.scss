@@ -3,3 +3,39 @@ Section - Nosotros
 -------------------------- */
 
 @use "../abstract" as *;
+
+.nosotros__cards-container {
+  @include flex(column, initial,center);
+  width: 100%;
+  margin-top: 60px;
+  padding: 0 20px;
+  @include tablet {
+    @include flex(row, center,initial);
+  }
+}
+
+.nosotros__card {
+  @include flex(column, initial, center);
+  max-width: 400px;
+  margin: 20px;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: $color-label;
+}
+
+.ncard__img {
+  position: absolute;
+  width: 80px;
+  transform: translatey(-60px);
+}
+
+.ncard__title {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.ncard__text {
+  margin-top: 20px;
+  text-align: center;
+}

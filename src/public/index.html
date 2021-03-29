@@ -21,21 +21,12 @@
   </head>
   <body>
     <header class="block__header">
-      <article class="header__hero" id="header__hero">
-        <div class="hero__container">
-          <div class="hero__logo-container"><img class="hero__logo" src="./assets/logos/logo-isologo-negro.png" alt=""></div>
-          <div class="hero__content">
-            <h1 class="hero__title"><span>pensado y creado</span><span>por barberos</span><span>para barberos</span></h1>
-          </div>
-          <div class="hero__start"><a class="hero__cta" href="#nosotros">inicio <i class="fas fa-chevron-down"></i></a></div>
-        </div>
-      </article>
       <nav class="header__navbar" id="header__navbar">
         <div class="navbar__container"><a class="navbar__logo-container" href="#header__hero"><img class="navbar__logo" src="./assets/logos/logo-barber-inclinado-rojo.png" alt=""></a>
           <ul class="navbar__links-container"><a class="navbar__link" href="#nosotros"> 
-              <li class="navbar__item">Nosotros</li></a><a class="navbar__link" href="#cursos"> 
-              <li class="navbar__item">Cursos</li></a><a class="navbar__link" href="#tutoriales"> 
-              <li class="navbar__item">Tutoriales</li></a><a class="navbar__link" href="#blog"> 
+              <li class="navbar__item">Nosotros</li></a><a class="navbar__link" href="#tutoriales"> 
+              <li class="navbar__item">Tutoriales</li></a><a class="navbar__link" href="#cursos"> 
+              <li class="navbar__item">Cursos</li></a><a class="navbar__link" href="#blog"> 
               <li class="navbar__item">Blog</li></a><a class="navbar__link" href="#team"> 
               <li class="navbar__item">Team</li></a><a class="navbar__link" href="#shop"> 
               <li class="navbar__item">Shop</li></a><a class="navbar__link" href="#contacto"> 
@@ -54,30 +45,43 @@
           </ul>
         </div>
         <ul class="menu__container menu__container--hide" id="menu__container"><a class="menu__link" href="#nosotros"> 
-            <li class="menu__item">Nosotros</li></a><a class="menu__link" href="#cursos"> 
-            <li class="menu__item">Cursos</li></a><a class="menu__link" href="#tutoriales"> 
-            <li class="menu__item">Tutoriales</li></a><a class="menu__link" href="#blog"> 
+            <li class="menu__item">Nosotros</li></a><a class="menu__link" href="#tutoriales"> 
+            <li class="menu__item">Tutoriales</li></a><a class="menu__link" href="#cursos"> 
+            <li class="menu__item">Cursos</li></a><a class="menu__link" href="#blog"> 
             <li class="menu__item">Blog</li></a><a class="menu__link" href="#team"> 
             <li class="menu__item">Team</li></a><a class="menu__link" href="#shop"> 
             <li class="menu__item">Shop</li></a><a class="menu__link" href="#contacto"> 
             <li class="menu__item">Contacto</li></a>
         </ul>
       </nav>
+      <article class="header__hero" id="header__hero">
+        <div class="hero__container">
+          <div class="hero__logo-container"><img class="hero__logo" src="./assets/logos/logo-isologo-negro.png" alt=""></div>
+          <div class="hero__content">
+            <h1 class="hero__title"><span>pensado y creado</span><span>por barberos</span><span>para barberos</span></h1>
+          </div>
+          <div class="hero__start"><a class="hero__cta" href="#nosotros">inicio <i class="fas fa-chevron-down"></i></a></div>
+        </div>
+      </article>
     </header>
     <main class="block__main">
       <section class="section__nosotros" id="nosotros">
-        <div class="nosotros__container">
+        <header class="nosotros__container">
           <h2>barber of today<br><span>who are we?</span></h2>
-        </div>
-      </section>
-      <section class="section__banner" id="banner">
-        <div class="banner__container">
-          <h3>BANNER</h3>
-        </div>
-      </section>
-      <section class="section__cursos" id="cursos">
-        <div class="cursos__container">
-          <h2>cursos y talleres<br><span>courses & workshops</span></h2>
+        </header>
+        <div class="nosotros__cards-container">
+          <div class="nosotros__card"><img class="ncard__img" src="./assets/icons/barba.png" alt="">
+            <h3 class="ncard__title">Titulo Card</h3>
+            <p class="ncard__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, placeat recusandae quam quas ipsum necessitatibus error eligendi molestias eveniet ratione quo similique magnam veniam aliquam laudantium. Ducimus nesciunt error consectetur?</p>
+          </div>
+          <div class="nosotros__card"><img class="ncard__img" src="./assets/icons/tijeras.png" alt="">
+            <h3 class="ncard__title">Titulo Card</h3>
+            <p class="ncard__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, placeat recusandae quam quas ipsum necessitatibus error eligendi molestias eveniet ratione quo similique magnam veniam aliquam laudantium. Ducimus nesciunt error consectetur?</p>
+          </div>
+          <div class="nosotros__card"><img class="ncard__img" src="./assets/icons/cliper.png" alt="">
+            <h3 class="ncard__title">Titulo Card</h3>
+            <p class="ncard__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, placeat recusandae quam quas ipsum necessitatibus error eligendi molestias eveniet ratione quo similique magnam veniam aliquam laudantium. Ducimus nesciunt error consectetur?</p>
+          </div>
         </div>
       </section>
       <section class="section__tutoriales" id="tutoriales">
@@ -85,14 +89,43 @@
           <h3>TUTORIALES</h3>
         </div>
       </section>
+      <section class="section__cursos" id="cursos">
+        <div class="cursos__container">
+          <h2>cursos y talleres<br><span>courses & workshops</span></h2>
+        </div>
+      </section>
+      <section class="section__banner" id="banner">
+        <div class="banner__container">
+          <article class="banner__fact"><img class="banner-fact__img" src="./assets/icons/sillon-barberia.png" alt="">
+            <h3 class="banner-fact__title">5174</h3>
+            <p class="banner-fact__text">anécdotas compartidas</p>
+          </article>
+          <article class="banner__fact"><img class="banner-fact__img" src="./assets/icons/bigote.png" alt="">
+            <h3 class="banner-fact__title">8613</h3>
+            <p class="banner-fact__text">bigotes peinados</p>
+          </article>
+          <article class="banner__fact"><img class="banner-fact__img" src="./assets/icons/maquinilla-de-afeitar.png" alt="">
+            <h3 class="banner-fact__title">6774</h3>
+            <p class="banner-fact__text">afiladas</p>
+          </article>
+        </div>
+      </section>
       <section class="section__blog" id="blog">
         <div class="blog__container">
           <h2>el blog<br><span>latest from the blog</span></h2>
         </div>
       </section>
-      <section class="section__banner" id="banner">
-        <div class="banner__container">
-          <h3>COMENTARIOS</h3>
+      <section class="section__comentarios" id="banner">
+        <div class="comentarios__container">
+          <article class="comentario__box comentario__on" id="comentario-01">
+            <p>"Por favor, no me coma señor extraterrestre, tengo una esposa y tres hijos..., cómaselos a ellos"</p><span>Juan Lopez<span>founter of google</span></span>
+          </article>
+          <article class="comentario__box comentario__hide" id="comentario-02">
+            <p>"Moe, sírveme algo fuerte como para olvidar que las odio (a sus cuñadas), pero no tanto como para creer que las quiero"</p><span>Cacho Gutuierrez<span>cto of facebook</span></span>
+          </article>
+          <article class="comentario__box comentario__hide" id="comentario-03">
+            <p>"Bart, con esos 10.000 dólares seríamos millonarios y podríamos comprar todo tipo de cosas útiles como... ¿amor?"</p><span>Pedro Ramirez<span>ceo at tinder</span></span>
+          </article>
         </div>
       </section>
       <section class="section__team" id="team">

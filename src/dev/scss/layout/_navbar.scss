@@ -7,22 +7,16 @@ Navbar
 // NAV
 
 .header__navbar {
-  position: absolute;
-  top: 100vh;
+  position: fixed;
+  top: 0;
   left: 0;
+  z-index: 120;
   @include flex-center(row);
   width: 100%;
   height: 62px;
   border-bottom: 2px solid $color-label;
   background-color: $color-bg-light;
 }
-
-.navbar-fix {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
 
 
 // NAV CONTAINER
@@ -32,9 +26,7 @@ Navbar
   width: 100%;
   height: 60px;
   max-width: 1300px;
-  z-index: 120
 }
-
 
 
 // NAV LOGO
@@ -43,12 +35,12 @@ Navbar
   position: relative;
   width: 120px;
   height: 60px;
+  z-index: 120;
 }
 
 .navbar__logo {
   width: 100%;
 }
-
 
 
 // NAV LINKS
@@ -97,7 +89,6 @@ Navbar
   color: $color-text-dark;
   @include transition(.3s, 0, linear, color);
 }
-
 
 
 // NAV BOTONERA TOP RIGHT

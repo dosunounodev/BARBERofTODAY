@@ -5,9 +5,64 @@ Sub - Comentarios
 @use "../abstract" as *;
 
 .section__comentarios {
-  background-color: $color-secondary;
-  padding-bottom: 65px;
+  @include flex-center(row);
+  min-height: 300px;
+  padding: 0;
+  background-image: url(../assets/images/cortando-tijera.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  background-color: rgba($color-bg-dark, .6);
+  background-blend-mode: overlay;
+  background-attachment: fixed
 }
 
 .comentarios__container {
+  @include flex-center(column);
+  width: 100%;
+  padding: 20px;
+}
+
+.comentario__box {
+  position: absolute;
+  opacity: 1;
+  pointer-events: initial;
+  @include transition(.5s,0,linear,opacity);
+
+  p {
+    max-width: 300px;
+    color: $color-bg-light;
+    text-align: center;
+    font-style: italic;
+    @include tablet {
+      font-size: 2.2rem;
+      max-width: 600px;
+    }
+  }
+  span {
+    display: block;
+    margin-top: 20px;
+    font-size: 2.0rem;
+    font-family: $font-secondary;
+    font-weight: $bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-secondary;
+    @include tablet {
+      font-size: 2.6rem;
+    }
+    span {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: $color-primary;
+      @include tablet {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.comentario__hide {
+  opacity: 0;
+  pointer-events: none;
 }

@@ -20,14 +20,14 @@ h1, h2, h3, h4, p, span, br {
 section {
   @include flex(column, flex-start, center);
   width: 100%;
-  height: 100vh;
+  padding-bottom: 65px;
   padding-top: 65px;
   scroll-margin: 65px;
 }
 
 .section__nosotros {
   padding-top: 130px;
-  scroll-margin: 0px
+  scroll-margin: 0px;
 }
 
 section div {
