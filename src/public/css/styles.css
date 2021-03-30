@@ -700,14 +700,6 @@ Navbar
     color: #e63939;
   }
 }
-.navbar__link:first-child {
-  display: none;
-}
-@media screen and (min-width: 880px) {
-  .navbar__link:first-child {
-    display: inherit;
-  }
-}
 
 .navbar__item {
   font-family: "Work Sans", sans-serif;
@@ -797,16 +789,45 @@ Section - Nosotros
   display: flex;
   flex-direction: column;
   justify-content: initial;
-  align-items: center;
+  align-items: flex-start;
   margin: 20px;
   margin-bottom: 60px;
   padding: 20px;
-  background-color: #e8e9e6;
-  background-image: linear-gradient(to bottom, #FDFDFC, #e8e9e6);
+  background-color: rgba(253, 253, 252, 0.2);
+  background-image: url(../assets/images/barba1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
   box-shadow: 3px 3px 8px 0 #040400;
 }
+.nosotros__card .ncard__title {
+  margin-top: 40px;
+  color: #c7e3ee;
+}
+.nosotros__card .ncard__text {
+  margin: 40px 0 0;
+  padding: 20px;
+  font-size: 1.8rem;
+  text-align: end;
+  color: #FDFDFC;
+  background-color: rgba(4, 4, 0, 0.5);
+}
+@media screen and (min-width: 768px) {
+  .nosotros__card .ncard__text {
+    width: 75%;
+  }
+}
 .nosotros__card:last-child {
+  align-items: flex-end;
   margin-bottom: 0;
+  background-image: url(../assets/images/peoplebw-cut.jpg);
+  background-position: right;
+}
+.nosotros__card:last-child .ncard__text {
+  text-align: start;
+  color: #FDFDFC;
 }
 @media screen and (min-width: 768px) {
   .nosotros__card {
@@ -818,17 +839,7 @@ Section - Nosotros
   position: absolute;
   width: 80px;
   transform: translatey(-60px);
-}
-
-.ncard__title {
-  margin-top: 40px;
-  text-align: center;
-  color: #e63939;
-}
-
-.ncard__text {
-  margin-top: 20px;
-  text-align: center;
+  filter: drop-shadow(0px 0px 5px #c7e3ee);
 }
 
 /*! -------------------------
@@ -847,6 +858,10 @@ Section - Tutoriales
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.tutoriales__container h2 span {
+  color: #FDFDFC;
+  z-index: 1;
 }
 
 .tutoriales__content {
@@ -946,21 +961,6 @@ Section - Tutoriales
     color: #e63939;
     background-color: #FDFDFC;
   }
-}
-
-/*! -------------------------
-Section - Team
--------------------------- */
-/*! -------------------------
-Section - Shop
--------------------------- */
-.section__shop {
-  background-color: #e63939;
-  padding-bottom: 65px;
-}
-
-.shop__container h3 {
-  color: #c7e3ee;
 }
 
 /*! -------------------------

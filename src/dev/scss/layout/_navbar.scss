@@ -73,12 +73,12 @@ Navbar
       }
     }
   }
-  &:first-child {
-    display: none;
-    @media screen and (min-width:880px) {
-      display: inherit;
-    }
-  }
+  // &:first-child {
+  //   display: none;
+  //   @media screen and (min-width:880px) {
+  //     display: inherit;
+  //   }
+  // }
 }
 
 .navbar__item {

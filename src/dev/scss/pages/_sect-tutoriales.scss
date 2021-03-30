@@ -10,7 +10,11 @@ Section - Tutoriales
 }
 
 .tutoriales__container {
-  @include flex-center(column)
+  @include flex-center(column);
+  h2 span {
+    color: $color-bg-light;
+    z-index: 1;
+  }
 }
 
 .tutoriales__content {

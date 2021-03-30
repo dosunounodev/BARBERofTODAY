@@ -3,7 +3,7 @@
     img(src="./assets/logos/logo-barber-inclinado-rojo.png", alt="").navbar__logo
   ul.navbar__links-container
     each link, nombre in navLinks
-      a(href="#"+link).navbar__link 
+      a(href=""+link).navbar__link 
         li.navbar__item #{nombre}
   ul.navbar__buttons-container
     each url, icon in navSocials
@@ -15,5 +15,5 @@
         .menu-icon
 ul.menu__container.menu__container--hide#menu__container
   each link, nombre in navLinks
-    a(href="#"+link).menu__link 
+    a(href=""+link).menu__link 
       li.menu__item #{nombre}
