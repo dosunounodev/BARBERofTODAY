@@ -35,11 +35,11 @@ Menus
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  color: $color-secondary;
+  color: $color-bg-light;
   &:nth-child(even) {
     transform: skew(-45deg) translatex(20px);
     align-self: flex-end;
-    background-color: rgba($color-secondary, .9);
+    background-color: rgba($color-bg-light, .9);
     color: $color-primary;
     text-align: center;
   }

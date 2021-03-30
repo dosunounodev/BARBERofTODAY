@@ -4,6 +4,10 @@ Section - Nosotros
 
 @use "../abstract" as *;
 
+.nosotros__container {
+
+}
+
 .nosotros__cards-container {
   @include flex(column, initial,center);
   width: 100%;
@@ -16,11 +20,10 @@ Section - Nosotros
 
 .nosotros__card {
   @include flex(column, initial, center);
-  max-width: 400px;
+  // max-width: 400px;
   margin: 20px;
   margin-bottom: 60px;
   padding: 20px;
-  // border-radius: 10px;
   background-color: $color-label;
   background-image: linear-gradient(to bottom, $color-bg-light, $color-label);
   box-shadow: 3px 3px 8px 0 $color-bg-dark;
@@ -41,6 +44,8 @@ Section - Nosotros
 .ncard__title {
   margin-top: 40px;
   text-align: center;
+  color: $color-primary;
+  // filter: drop-shadow(1px 1px 2px $color-primary);
 }
 
 .ncard__text {

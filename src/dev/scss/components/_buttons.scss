@@ -91,9 +91,9 @@ Buttons
   text-transform: uppercase;
   text-decoration: none;
   color: $color-primary;
-  background-color:rgba($color-bg-light, 0.2);
+  background-color:$color-bg-light;
   border: 2px solid $color-primary;
-  border-radius: 20px;
+  // border-radius: 20px;
   @include transition(.5s, 0, linear, color,background-color,border);
   @media (hover: hover) and (pointer: fine) {
     &:hover {

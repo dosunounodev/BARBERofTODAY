@@ -36,11 +36,6 @@ Sub - Banner
   @include tablet {
     margin-bottom: 0;
   }
-  &:nth-child(2) {
-    .banner-fact__title {
-      margin-top: 0;
-    }
-  }
 }
 
 .banner-fact__img {
@@ -58,5 +53,5 @@ Sub - Banner
   font-weight: $semibold;
   text-align: center;
   text-transform: uppercase;
-  color: $color-label;
+  color: $color-secondary;
 }
