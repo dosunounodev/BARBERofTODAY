@@ -100,7 +100,7 @@
             <h3 class="banner-fact__title">5174</h3>
             <p class="banner-fact__text">anécdotas compartidas</p>
           </article>
-          <article class="banner__fact"><img class="banner-fact__img" src="./assets/icons/bigote.png" alt="">
+          <article class="banner__fact"><img class="banner-fact__img" src="./assets/icons/barba.png" alt="">
             <h3 class="banner-fact__title">8613</h3>
             <p class="banner-fact__text">bigotes peinados</p>
           </article>
@@ -131,10 +131,48 @@
       <section class="section__contacto" id="contacto">
         <div class="contacto__container">
           <h2>contacto<br><span>contact us</span></h2>
+          <div class="contacto__content">
+            <div class="contacto__medios">
+              <h3>Nuestras redes:
+                <div class="contacto__redes">
+                  <div class="contacto__red"><a href="#"><i class="fab fa-instagram contacto-icon"></i></a><a class="contacto-link" href="">@BarberOfToday</a></div>
+                  <div class="contacto__red"><a href="#"><i class="fab fa-facebook contacto-icon"></i></a><a class="contacto-link" href="">@BarberOfToday</a></div>
+                  <div class="contacto__red"><a href="#"><i class="fab fa-pinterest contacto-icon"></i></a><a class="contacto-link" href="">@BarberOfToday</a></div>
+                  <div class="contacto__red"><a href="#"><i class="fab fa-youtube contacto-icon"></i></a><a class="contacto-link" href="">@BarberOfTodayVideos</a></div>
+                </div>
+              </h3>
+            </div>
+            <div class="contacto__form">
+              <h3>Dejanos un mensaje:</h3>
+              <form class="form-contact" action="https://formsubmit.co/emmefdz@gmail.com" method="POST" id="form-contact">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/src/public/index.html">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="Nuevo mensaje de contacto en barberoftoday.com">
+                <input type="text" name="_honey" style="display:none">
+                <div class="form-field">
+                  <label for="contact-name">Nombre<span class="form-alert"></span></label>
+                  <input type="text" name="name" id="contact-name">
+                </div>
+                <div class="form-field">
+                  <label for="contact-email">Email <span class="form-alert"></span></label>
+                  <input type="email" name="email" id="contact-email">
+                </div>
+                <div class="form-field">
+                  <label for="contact-subject">Asunto<span class="form-alert"></span></label>
+                  <input type="text" name="subject" id="contact-subject">
+                </div>
+                <div class="form-field">
+                  <label for="contact-msg">Mensaje<span class="form-alert"></span></label>
+                  <textarea name="msg" id="contact-msg"> </textarea>
+                </div>
+                <input class="contact-enviar" type="submit" id="contact-enviar" value="enviar">
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer class="block__footer"></footer>
-    <script src="./js/scripts.js"></script>
+    <script src="./js/scripts.js" type="module"></script>
   </body>
 </html>

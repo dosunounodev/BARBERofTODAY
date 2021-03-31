@@ -3,3 +3,79 @@ Forms
 -------------------------- */
 
 @use "../abstract" as *;
+
+.form-contact {
+  @include flex(column,center,center);
+  padding: 0 20px;
+
+  .form-field {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    font-size: 2.0rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $color-text
+  }
+  input {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    outline: 0;
+    border: 2px solid $color-label;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $color-text;
+    background-color: $color-bg-light;
+  }
+  textarea {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    min-height: 100px;
+    resize: none;
+    padding: 5px;
+    border: 2px solid $color-label;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $color-text;
+    background-color: $color-bg-light;
+  }
+  .contact-enviar {
+    padding: 10px;
+    font-family: $font-secondary;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: $color-bg-light;
+    background-color: $color-bg-dark;
+    border: 2px solid $color-primary;
+    cursor: pointer;
+    @include transition(.3s,0s,linear,color,background-color,border);
+    &:hover {
+      color: $color-bg-dark;
+      background-color: $color-secondary;
+      border: 2px solid $color-bg-dark;
+    }
+  }
+  .form-alert {
+    display: none;
+    margin: 5px 0;
+    padding: 5px 10px;
+    font-family: $font-secondary;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $color-bg-light;
+    background-color: $color-primary;
+  }
+  .form-alert-active {
+    display: block;
+  }
+  .form-input-error {
+    border: 2px solid $color-primary;
+  }
+}
+

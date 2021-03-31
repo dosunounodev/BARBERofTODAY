@@ -3,3 +3,61 @@ Section - Contacto
 -------------------------- */
 
 @use "../abstract" as *;
+
+.contacto__content {
+  @include flex(column);
+  margin-top: 60px;
+  @include tablet {
+    flex-direction: row;
+  }
+  h3 {
+    padding: 20px
+  }
+}
+
+.contacto__medios {
+  @include flex(column, initial, center);
+}
+.contacto__redes {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 0
+  }
+}
+.contacto__red {
+  @include flex(column,initial,center);
+  width: 100%;
+  text-align: start;
+  margin-bottom: 20px;
+  @media (min-width: 400px) {
+    flex-direction: row;
+  }
+  .contacto-link {
+    padding: 10px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    letter-spacing: 5px;
+    text-transform: initial;
+    text-decoration: none;
+    color: $color-text;
+    background-color: $color-secondary;
+    @include transition(.3s,0s,linear,color,background-color);
+    &:hover {
+      color: $color-secondary;
+      background-color: $color-primary;
+    }
+  }
+  i {
+    width: 40px;
+    font-size: 3.0rem;
+    text-align: center;
+    margin-right: 10px;
+    padding: 5px;
+    color: $color-primary;
+    @include transition(.3s,0s,linear,color);
+    &:hover {
+      color: $color-text;
+    }
+  }
+}

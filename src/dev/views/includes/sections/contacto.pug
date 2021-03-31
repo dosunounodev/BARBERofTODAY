@@ -3,3 +3,47 @@ section.section__contacto#contacto
     h2 contacto
       br
       span contact us
+    .contacto__content
+      .contacto__medios
+        h3 Nuestras redes:
+          .contacto__redes
+            .contacto__red
+              a(href="#")
+                i(class="fab fa-instagram").contacto-icon
+              a(href="").contacto-link @BarberOfToday
+            .contacto__red
+              a(href="#")
+                i(class="fab fa-facebook").contacto-icon
+              a(href="").contacto-link @BarberOfToday
+            .contacto__red
+              a(href="#")
+                i(class="fab fa-pinterest").contacto-icon
+              a(href="").contacto-link @BarberOfToday
+            .contacto__red
+              a(href="#")
+                i(class="fab fa-youtube").contacto-icon
+              a(href="").contacto-link @BarberOfTodayVideos
+      .contacto__form
+        h3 Dejanos un mensaje:
+        form(action="https://formsubmit.co/emmefdz@gmail.com" method="POST")#form-contact.form-contact
+          input(type="hidden" name="_next" value="http://127.0.0.1:5500/src/public/index.html")
+          input(type="hidden" name="_captcha" value="false")
+          input(type="hidden" name="_subject" value="Nuevo mensaje de contacto en barberoftoday.com")
+          input(type="text" name="_honey" style="display:none")
+          .form-field
+            label(for="contact-name") Nombre
+              span.form-alert
+            input(type="text" name="name" id="contact-name")
+          .form-field
+            label(for="contact-email") Email 
+              span.form-alert
+            input(type="email" name="email" id="contact-email")
+          .form-field
+            label(for="contact-subject") Asunto
+              span.form-alert
+            input(type="text" name="subject" id="contact-subject")
+          .form-field
+            label(for="contact-msg") Mensaje
+              span.form-alert
+            textarea(name="msg" id="contact-msg") 
+          input(type="submit" class="contact-enviar" id="contact-enviar" value="enviar")

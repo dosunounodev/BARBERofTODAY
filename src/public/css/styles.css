@@ -435,6 +435,87 @@ Carrousels
 /*! -------------------------
 Forms
 -------------------------- */
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+.form-contact .form-field {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+.form-contact label {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #3c3b3c;
+}
+.form-contact input {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 5px;
+  outline: 0;
+  border: 2px solid #e8e9e6;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3c3b3c;
+  background-color: #FDFDFC;
+}
+.form-contact textarea {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  min-height: 100px;
+  resize: none;
+  padding: 5px;
+  border: 2px solid #e8e9e6;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #3c3b3c;
+  background-color: #FDFDFC;
+}
+.form-contact .contact-enviar {
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #FDFDFC;
+  background-color: #040400;
+  border: 2px solid #e63939;
+  cursor: pointer;
+  will-change: color, background-color, border;
+  transition-property: color, background-color, border;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  transition-timing-function: linear;
+}
+.form-contact .contact-enviar:hover {
+  color: #040400;
+  background-color: #c7e3ee;
+  border: 2px solid #040400;
+}
+.form-contact .form-alert {
+  display: none;
+  margin: 5px 0;
+  padding: 5px 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FDFDFC;
+  background-color: #e63939;
+}
+.form-contact .form-alert-active {
+  display: block;
+}
+.form-contact .form-input-error {
+  border: 2px solid #e63939;
+}
+
 /*! -------------------------
 Menus
 -------------------------- */
@@ -966,6 +1047,89 @@ Section - Tutoriales
 /*! -------------------------
 Section - Contacto
 -------------------------- */
+.contacto__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .contacto__content {
+    flex-direction: row;
+  }
+}
+.contacto__content h3 {
+  padding: 20px;
+}
+
+.contacto__medios {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+}
+
+.contacto__redes {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .contacto__redes {
+    margin-bottom: 0;
+  }
+}
+
+.contacto__red {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+  width: 100%;
+  text-align: start;
+  margin-bottom: 20px;
+}
+@media (min-width: 400px) {
+  .contacto__red {
+    flex-direction: row;
+  }
+}
+.contacto__red .contacto-link {
+  padding: 10px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 5px;
+  text-transform: initial;
+  text-decoration: none;
+  color: #3c3b3c;
+  background-color: #c7e3ee;
+  will-change: color, background-color;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  transition-timing-function: linear;
+}
+.contacto__red .contacto-link:hover {
+  color: #c7e3ee;
+  background-color: #e63939;
+}
+.contacto__red i {
+  width: 40px;
+  font-size: 3rem;
+  text-align: center;
+  margin-right: 10px;
+  padding: 5px;
+  color: #e63939;
+  will-change: color;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  transition-timing-function: linear;
+}
+.contacto__red i:hover {
+  color: #3c3b3c;
+}
+
 /*! -------------------------
 Sub - Banner
 -------------------------- */
