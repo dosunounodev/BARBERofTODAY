@@ -594,6 +594,11 @@ Layout
   max-width: 1300px;
 }
 
+.footer__container {
+  width: 100%;
+  max-width: 1300px;
+}
+
 /*! -------------------------
 Grid
 -------------------------- */
@@ -839,6 +844,70 @@ Navbar
 /*! -------------------------
 Footer
 -------------------------- */
+.block__footer {
+  background-color: #040400;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 40px 0;
+  color: #FDFDFC;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.footer__container img {
+  display: block;
+  width: 100px;
+  filter: invert(1);
+}
+
+.footer-copy {
+  margin-bottom: 40px;
+}
+
+.footer-dev {
+  margin-top: 40px;
+}
+
+.footer-copy,
+.footer-dev {
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 768px) {
+  .footer-copy,
+.footer-dev {
+    margin: 0;
+  }
+}
+.footer-copy span,
+.footer-dev span {
+  font-weight: 600;
+  color: #e63939;
+}
+.footer-copy a,
+.footer-dev a {
+  text-decoration: none;
+  color: #e63939;
+  will-change: color;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.footer-copy a:hover,
+.footer-dev a:hover {
+  color: #c7e3ee;
+}
+
 /*! -------------------------
 Index
 -------------------------- */
@@ -1128,6 +1197,71 @@ Section - Contacto
 }
 .contacto__red i:hover {
   color: #3c3b3c;
+}
+
+.contacto-mail {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  background-color: #c7e3ee;
+  padding: 5px;
+  margin-bottom: 60px;
+}
+.contacto-mail i {
+  display: block;
+  color: #e63939;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .contacto-mail {
+    margin-bottom: 0;
+  }
+}
+
+.contacto-ok {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 40px auto 0;
+  padding: 20px;
+  background-color: #c7e3ee;
+}
+.contacto-ok p {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+.contacto-ok p:first-child {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #e63939;
+}
+.contacto-ok p:last-child {
+  margin-bottom: 0px;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #FDFDFC;
+  background-color: #e63939;
+  cursor: pointer;
+  will-change: color, background-color;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  transition-timing-function: linear;
+}
+.contacto-ok p:last-child:hover {
+  color: #e63939;
+  background-color: #FDFDFC;
+}
+
+.form-none {
+  display: none;
 }
 
 /*! -------------------------

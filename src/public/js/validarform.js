@@ -5,7 +5,8 @@ const formEmail = d.getElementById('contact-email')
 const formSubject = d.getElementById('contact-subject')
 const formMsg = d.getElementById('contact-msg')
 const formEnviar = d.getElementById('contact-enviar')
-// let errores = []
+const formOk = d.getElementById('contacto-ok')
+const newMsg = d.getElementById('newmsg')
 
 export default function validarForm () {
 
@@ -45,5 +46,20 @@ export default function validarForm () {
   else if(formMsg.value.length > 200) setError(formMsg, 'El mensaje no puede tener más de 200 cáracteres')
   else setSuccess(formMsg)
 
-  if(errores.length === 0) form.submit()
+  // if(errores.length === 0) form.submit()
+  if(errores.length === 0) {
+    let dataToSend = new FormData(form)
+    let optionsForm = {
+      method: 'POST',
+      body: dataToSend
+    }
+    fetch('https://formsubmit.co/ajax/emmefdz@gmail.com', optionsForm)
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .then(form.reset())
+    .then(form.classList.toggle('form-none'))
+    .then(formOk.classList.toggle('form-none'))
+    // .then(alert('Gracias por contactarte. Saludos'))
+    .catch(err => console.log(err))
+  }
   }

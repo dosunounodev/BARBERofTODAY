@@ -135,15 +135,22 @@
             <div class="contacto__medios">
               <h3>Nuestras redes:
                 <div class="contacto__redes">
-                  <div class="contacto__red"><a href="#"><i class="fab fa-instagram contacto-icon"></i></a><a class="contacto-link" href="">@BarberOfToday</a></div>
-                  <div class="contacto__red"><a href="#"><i class="fab fa-facebook contacto-icon"></i></a><a class="contacto-link" href="">@BarberOfToday</a></div>
-                  <div class="contacto__red"><a href="#"><i class="fab fa-pinterest contacto-icon"></i></a><a class="contacto-link" href="">@BarberOfToday</a></div>
-                  <div class="contacto__red"><a href="#"><i class="fab fa-youtube contacto-icon"></i></a><a class="contacto-link" href="">@BarberOfTodayVideos</a></div>
+                  <div class="contacto__red"><a href="#"><i class="fab fa-instagram contacto-icon"></i></a><a class="contacto-link" href="">BarberOfToday</a></div>
+                  <div class="contacto__red"><a href="#"><i class="fab fa-facebook contacto-icon"></i></a><a class="contacto-link" href="">BarberOfToday</a></div>
+                  <div class="contacto__red"><a href="#"><i class="fab fa-pinterest contacto-icon"></i></a><a class="contacto-link" href="">BarberOfToday</a></div>
+                  <div class="contacto__red"><a href="#"><i class="fab fa-youtube contacto-icon"></i></a><a class="contacto-link" href="">BarberOfTodayVideos</a></div>
                 </div>
               </h3>
+              <h3>Mandame un mail:</h3>
+              <p class="contacto-mail"><i class="fas fa-envelope"></i> hola@barberoftoday.com</p>
             </div>
             <div class="contacto__form">
               <h3>Dejanos un mensaje:</h3>
+              <div class="contacto-ok form-none" id="contacto-ok">
+                <p>Gracias por contactarte!</p>
+                <p>Lo antes posible tendrás una respuesta!</p>
+                <p class="newMsg" id="newmsg">Enviar otro mensaje</p>
+              </div>
               <form class="form-contact" action="https://formsubmit.co/emmefdz@gmail.com" method="POST" id="form-contact">
                 <input type="hidden" name="_next" value="http://127.0.0.1:5500/src/public/index.html">
                 <input type="hidden" name="_captcha" value="false">
@@ -172,7 +179,12 @@
         </div>
       </section>
     </main>
-    <footer class="block__footer"></footer>
+    <footer class="block__footer">
+      <div class="footer__container">
+        <p class="footer-copy">&copy; 2021 - <span>BarberOfToday</span></p><img src="./assets/logos/logo-isologo-negro.png" alt="">
+        <p class="footer-dev">Desarrollo web: <span><a href="https://dosunouno.dev/" target="_blank">dosunouno.dev</a></span></p>
+      </div>
+    </footer>
     <script src="./js/scripts.js" type="module"></script>
   </body>
 </html>

@@ -10,21 +10,29 @@ section.section__contacto#contacto
             .contacto__red
               a(href="#")
                 i(class="fab fa-instagram").contacto-icon
-              a(href="").contacto-link @BarberOfToday
+              a(href="").contacto-link BarberOfToday
             .contacto__red
               a(href="#")
                 i(class="fab fa-facebook").contacto-icon
-              a(href="").contacto-link @BarberOfToday
+              a(href="").contacto-link BarberOfToday
             .contacto__red
               a(href="#")
                 i(class="fab fa-pinterest").contacto-icon
-              a(href="").contacto-link @BarberOfToday
+              a(href="").contacto-link BarberOfToday
             .contacto__red
               a(href="#")
                 i(class="fab fa-youtube").contacto-icon
-              a(href="").contacto-link @BarberOfTodayVideos
+              a(href="").contacto-link BarberOfTodayVideos
+        h3 Mandame un mail:
+        p.contacto-mail
+          i(class="fas fa-envelope")
+          |  hola@barberoftoday.com
       .contacto__form
         h3 Dejanos un mensaje:
+        #contacto-ok.contacto-ok.form-none
+          p Gracias por contactarte!
+          p Lo antes posible tendrás una respuesta!
+          p.newMsg#newmsg Enviar otro mensaje
         form(action="https://formsubmit.co/emmefdz@gmail.com" method="POST")#form-contact.form-contact
           input(type="hidden" name="_next" value="http://127.0.0.1:5500/src/public/index.html")
           input(type="hidden" name="_captcha" value="false")

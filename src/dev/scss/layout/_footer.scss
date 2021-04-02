@@ -3,3 +3,50 @@ Footer
 -------------------------- */
 
 @use "../abstract" as *;
+
+.block__footer {
+  background-color: $color-bg-dark
+}
+
+.footer__container {
+  @include flex(column, flex-start, center);
+  @include tablet {
+    @include flex(row, space-around, center);
+  }
+  margin: 40px 0;
+  color: $color-bg-light;
+
+  img {
+    display: block;
+    width: 100px;
+    filter: invert(1);
+  }
+}
+
+.footer-copy {
+  margin-bottom: 40px;
+}
+
+.footer-dev {
+  margin-top: 40px
+}
+
+.footer-copy,
+.footer-dev {
+  @include tablet {
+    margin: 0;
+  }
+  font-size: 1.8rem;
+  span {
+    font-weight: 600;
+    color: $color-primary;
+  }
+  a {
+    text-decoration: none;
+    color: $color-primary;
+    @include transition(.3s,0,linear,color);
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}
