@@ -914,6 +914,85 @@ Index
 /*! -------------------------
 Section - Blog
 -------------------------- */
+.blog__post {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  margin-top: 40px;
+  background-color: #e8e9e6;
+}
+@media screen and (min-width: 768px) {
+  .blog__post {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .blog__post:nth-child(odd) .blog__picture {
+    order: 1;
+  }
+}
+.blog__picture,
+.blog__content {
+  width: 100%;
+  padding: 20px;
+}
+@media screen and (min-width: 768px) {
+  .blog__picture,
+.blog__content {
+    width: 50%;
+  }
+}
+
+.blog__img-container {
+  height: 100%;
+}
+.blog__img-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog__title {
+  max-width: 25ch;
+  margin-bottom: 20px;
+  text-align: start;
+}
+
+.blog__resume p {
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.blog__read-more {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 20px;
+  color: #FDFDFC;
+  background-color: #e63939;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  will-change: color, background-color;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.blog__read-more:hover {
+  color: #e63939;
+  background-color: #FDFDFC;
+}
+
 /*! -------------------------
 Section - Nosotros
 -------------------------- */
@@ -995,6 +1074,101 @@ Section - Nosotros
 /*! -------------------------
 Section - Cursos
 -------------------------- */
+.curso__post {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  margin-top: 40px;
+  background-color: #e63939;
+}
+@media screen and (min-width: 768px) {
+  .curso__post {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .curso__post:nth-child(odd) .curso__picture {
+    order: 1;
+  }
+}
+.curso__picture,
+.curso__content {
+  width: 100%;
+  padding: 20px;
+}
+@media screen and (min-width: 768px) {
+  .curso__picture,
+.curso__content {
+    width: 50%;
+  }
+}
+
+.curso__img-container {
+  height: 100%;
+}
+.curso__img-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.curso__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.curso__title {
+  max-width: 25ch;
+  margin-bottom: 20px;
+  color: #FDFDFC;
+  text-align: start;
+}
+
+.curso__resume p {
+  margin: 20px 0;
+  color: #FDFDFC;
+  line-height: 1.5;
+}
+.curso__resume p span {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #040400;
+  background-color: #c7e3ee;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.curso__resume p:nth-child(odd) {
+  text-align: end;
+}
+
+.curso__read-more {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 20px;
+  color: #e63939;
+  background-color: #c7e3ee;
+  font-size: 3rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  will-change: color, background-color;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-delay: 0;
+  transition-timing-function: linear;
+}
+.curso__read-more:hover {
+  color: #e63939;
+  background-color: #FDFDFC;
+}
+
 /*! -------------------------
 Section - Tutoriales
 -------------------------- */
